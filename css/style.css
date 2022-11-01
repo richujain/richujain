@@ -179,3 +179,68 @@
 .owl-theme .owl-dots .owl-dot {
   display: none !important;
 }
+
+/***********************/
+/* PROJECTS SECTION */
+/***********************/
+
+.section-projects {
+  padding: 9.6rem 0;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  /* Moving left and top 50% of its width and height */
+  transform: translate(-50%, -50%);
+}
+.step-img-box::before {
+  width: 60%;
+  /* Not working */
+  /* height: 60%; */
+  /* 60% of parent's width */
+  padding-bottom: 60%;
+
+  background-color: #6cccec;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #3bbfeb;
+  z-index: -1;
+}
+
+.step-img {
+  width: 45%;
+}
+.step-img-landscape {
+  width: 75%;
+  border: 1px solid #6ccbeb;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
