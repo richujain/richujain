@@ -280,6 +280,10 @@ body {
   color: #3d5afe;
 }
 
+.subheading-color-white {
+  color: #fff;
+}
+
 .subheading-color-dark {
   color: #000c51;
 }
