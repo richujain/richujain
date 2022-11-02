@@ -284,3 +284,18 @@
   outline: none;
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
+
+/***********************/
+/* LINE SECTION */
+/***********************/
+
+.section-line {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.line-1 {
+  border: 5px solid #3d5afe;
+}
