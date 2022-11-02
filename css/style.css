@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fbfaf9;
+  background-color: #fff;
 
   /*Height because we wanted this to be sticky*/
   height: 9.6rem;
@@ -57,14 +57,11 @@
   background-color: #000c51;
 }
 
-***********************/
+/***********************/
 /* HERO SECTION */
 /***********************/
 
 .section-hero {
-  padding: 4.8rem 0 9.6rem 0;
-}
-.section-tech {
   padding: 4.8rem 0 9.6rem 0;
 }
 
@@ -88,8 +85,46 @@
   width: 100%;
 }
 
+.circle-inner {
+  position: absolute;
+  height: 150rem;
+  left: -110rem;
+  top: -90rem;
+  z-index: -9;
+  transform: rotate(180deg);
+  -webkit-animation: spin 100s linear infinite;
+  -moz-animation: spin 100s linear infinite;
+  animation: spin 100s linear infinite;
+}
+.circle-outer {
+  position: absolute;
+  height: 150rem;
+  left: -75rem;
+  top: -80rem;
+  z-index: -10;
+  -webkit-animation: spin 100s linear infinite;
+  -moz-animation: spin 100s linear infinite;
+  animation: spin 100s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 /***********************/
-/* FEATURED-IN SECTION */
+/* TECHNOLOGIES SECTION */
 /***********************/
 
 .section-technologies {
