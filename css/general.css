@@ -220,8 +220,8 @@ body {
 
 .ring {
   position: absolute;
-  width: 8rem;
-  height: 4rem;
+  width: 7rem;
+  height: 3.5rem;
   border-radius: 50%;
   border: 6px solid #3d5afe;
 }

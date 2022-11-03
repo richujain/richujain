@@ -1,0 +1,325 @@
+/* rem and em do NOT depend on html font-size in media queries */
+/* Instead, 1rem = 1em = 16px */
+
+/***********************/
+/* BELOW (1344px) (Smaller desktops) */
+/***********************/
+
+/* 1350 / 16 = 84 */
+@media (max-width: 86em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .bg-circle {
+    left: 85rem;
+  }
+}
+
+/***********************/
+/* BELOW (1250px) (Smaller desktops) */
+/***********************/
+
+/* 1250 / 16 = 84 */
+@media (max-width: 79rem) {
+  .bg-circle {
+    left: 80rem;
+  }
+  .header {
+    z-index: 1;
+  }
+}
+
+/***********************/
+/* BELOW (1200px) (Landscape Tablets) */
+/***********************/
+
+/* 1200 / 16 = 84 */
+@media (max-width: 75em) {
+  html {
+    /*1em = 9px =>  9px / 16px = 56.25 */
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 2.4rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .bg-circle {
+    left: 70rem;
+  }
+}
+
+/* 1100 / 16 = 69 */
+@media (max-width: 69em) {
+  .bg-circle {
+    visibility: hidden;
+  }
+}
+
+/***********************/
+/* BELOW (940px) (Tablets) */
+/***********************/
+
+/* 944 / 16 = 84 */
+@media (max-width: 59em) {
+  html {
+    /*1em = 8px => 8px / 16px = 50 */
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .hero-img-box {
+    display: none;
+  }
+
+  .hero-text-box {
+    text-align: center;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+  .contact-img {
+    grid-row: 1;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 998;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Prefix for safari and chrome.
+    backfrop-filer is not supported by safari, hence */
+    --webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-out;
+
+    /* Hide Navigation */
+    /* Allows no transitions at all */
+    /* display: none; */
+
+    /* 1. Hide it visually */
+    opacity: 0;
+
+    /* 2. Make it accessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3. Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/***********************/
+/* BELOW (704px) (Smaller Tablets) */
+/***********************/
+
+/* 704 / 16 = 84 */
+@media (max-width: 44em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+}
+
+/***********************/
+/* BELOW (544px) (Smaller Tablets) */
+/***********************/
+
+/* 544 / 16 = 34 */
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .cta-image-box {
+    height: 32rem;
+    grid-row: 1;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+}
+
+/***********************/
+/* Fixing Safari Flexbox Gap */
+/***********************/
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Portfolio of Richu Jain" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
@@ -18,11 +19,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
     <script defer src="scripts/script.js"></script>
 
     <title>Richu Jain</title>
@@ -55,6 +61,11 @@
           <li><a class="main-nav-link nav-cta" href="#cta">Contact</a></li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
     </header>
     <main>
       <section class="section-hero" data-aos="zoom-in" data-aos-delay="50">
@@ -181,58 +192,44 @@
         data-aos-delay="50"
       >
         <h2 class="heading-secondary subheading-color">Contact</h2>
-        <div class="hero">
-          <div class="contact-container">
-            <div class="cta">
-              <div class="cta-text-box">
-                <h2 class="heading-secondary subheading-color-white">
-                  Get In Touch!
-                </h2>
+        <div class="cta">
+          <div class="cta-text-box">
+            <h2 class="heading-secondary subheading-color-white">
+              Get In Touch!
+            </h2>
 
-                <form class="cta-form" name="sign-up" netlify>
-                  <div>
-                    <label for="full-name">Full Name</label>
-                    <input
-                      id="full-name"
-                      type="text"
-                      required
-                      placeholder="John Smith"
-                      name="full-name"
-                    />
-                  </div>
-                  <div>
-                    <label for="email"
-                      >Email
-                      <address></address
-                    ></label>
-                    <input
-                      id="email"
-                      type="email"
-                      required
-                      placeholder="me@example.com"
-                      name="email"
-                    />
-                  </div>
-                  <div>
-                    <label for="full-name">Purpose</label>
-                    <input
-                      id="purpose"
-                      type="text"
-                      placeholder=""
-                      name="purpose"
-                    />
-                  </div>
-                  <button class="btn btn--form">Sign up now</button>
-                </form>
+            <form class="cta-form" name="sign-up" netlify>
+              <div>
+                <label for="full-name">Full Name</label>
+                <input
+                  id="full-name"
+                  type="text"
+                  required
+                  placeholder="John Smith"
+                  name="full-name"
+                />
               </div>
-              <div
-                class="cta-image-box"
-                role="img"
-                aria-label="Woman enjoying food"
-              ></div>
-            </div>
+              <div>
+                <label for="email"
+                  >Email
+                  <address></address
+                ></label>
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  placeholder="me@example.com"
+                  name="email"
+                />
+              </div>
+              <div>
+                <label for="full-name">Purpose</label>
+                <input id="purpose" type="text" placeholder="" name="purpose" />
+              </div>
+              <button class="btn btn--form">Sign up now</button>
+            </form>
           </div>
-          <div class="hero-img-box">
+          <div class="contact-img">
             <picture>
               <img
                 src="img/headshot.png"
@@ -272,5 +269,13 @@
         // Your code here
       });
     </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
