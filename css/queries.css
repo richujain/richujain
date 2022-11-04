@@ -214,6 +214,16 @@
   .heading-primary {
     font-size: 3.2rem !important;
   }
+
+  .cta {
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-img {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 /***********************/
