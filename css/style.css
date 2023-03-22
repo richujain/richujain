@@ -326,7 +326,7 @@
 }
 
 .cta-form input::placeholder {
-  color: rgb(149, 141, 141);
+  color: grey;
 }
 
 .cta *:focus {
